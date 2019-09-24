@@ -16,8 +16,7 @@ public class sqlMetoder{
     String password = "Test123";
 
 
-    public void testLogin (TextField brukernavn, PasswordField passord){
-
+    public boolean testLogin (TextField brukernavn, PasswordField passord){
 
 
         // Her kobler vi til databasen og lager en sql statement
@@ -37,6 +36,7 @@ public class sqlMetoder{
             // lagt inn test for hvis noe spesifikt blir skrevet inn i passord og brukernavn
             if(rs.next()){
                 JOptionPane.showMessageDialog(null,"Welcome "+brukernavn.getText().toUpperCase()+"!");
+                return true;
             }else{
                 JOptionPane.showMessageDialog(null,"Username or Password not Correct\n" +
                         "Please try again");
@@ -48,7 +48,7 @@ public class sqlMetoder{
             JOptionPane.showMessageDialog(null,"Could not connect to server!\n" +
                     "Check your internet connection or contact administrator");
         }
-
+        return false;
     }
 
 }

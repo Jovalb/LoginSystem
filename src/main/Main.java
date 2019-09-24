@@ -6,17 +6,30 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 //TODO: Se videre for å lage en ny skjerm da man logger inn suksessfullt
 
 public class Main extends Application {
 
+   /* BRUK FØLGENDE KODE FOR Å BYTTE SCENER I FREMTIDEN
+
+    Parent side2Parent = FXMLLoader.load(getClass().getResource("Side2.fxml"));
+    Scene side2 = new Scene(side2Parent);
+    Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+    window.setScene(side2); */
+
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
         primaryStage.setTitle("Login Page");
         primaryStage.setScene(new Scene(root));
         primaryStage.setResizable(false);
         primaryStage.show();
+        System.out.println(System.getProperty("java.version"));
+        System.out.println(System.getProperty("javafx.version"));
+
     }
 
 
