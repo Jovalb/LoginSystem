@@ -1,4 +1,4 @@
-package sample;
+package main;
 
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;
@@ -13,7 +13,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class Controller implements Initializable {
+public class MainController implements Initializable {
 
     private Service<Void> bakgrunnThread;
 
