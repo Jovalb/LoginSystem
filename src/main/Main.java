@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-//TODO: Se videre for å lage en ny skjerm da man logger inn suksessfullt
+//TODO: Fikle mer med neste side som kommer etter innlogging, legg til utlogg knapp og last inn ting fra MySQL osv
 
 public class Main extends Application {
 
